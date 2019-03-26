@@ -1,0 +1,26 @@
+<h1>Art Scraper</h1>
+<!--<img src="/img/art-1209519_1920.jpg" alt="art">-->
+<button id="scraper">Scrape More Art Articles</button> 
+<br>
+
+<br>
+{{#each articles}}
+<ol>
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="title"> {{this.title}} </div> 
+            {{this.summary}}
+        </div>
+        <div class="col-sm-2">
+            <form action={{this.link}}>
+                <input type="submit" value="Link" class="link">
+            </form>
+            <br>
+        </div>
+        <div class="col-sm-2">
+            <button data-id="{{this._id}}" class="comment">Comment</button>
+            <br>
+        </div>
+    </div>
+</ol>
+{{/each}}

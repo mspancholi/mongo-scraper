@@ -1,0 +1,36 @@
+body {
+    /*background: rgb(129, 221, 228);*/
+    font-size: 18px;
+    background: url("../img/background-2719576_1920.jpg");
+    
+}
+
+#scraper {
+    margin-left: 50px;
+}
+
+    
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: orangered;
+}
+
+.link {
+    float: right;
+
+}
+
+h1 { 
+    text-align: center; 
+    color: rgb(255, 0, 68);
+    font-size: 50px;
+    font-weight: bold;
+
+}
+
+ol {
+    margin-left: 10px;
+}
+
+

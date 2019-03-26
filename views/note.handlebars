@@ -1,0 +1,37 @@
+{{#each articles}}
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">{{this.title}}</h4>
+        </div>
+        <div class="modal-body">
+            {{#if note}}
+            <div class="row">
+                <input type="text" name="Title" id="titleinput" value={{this.note.title}}>
+            </div>
+            <br>
+            <div class="row">
+                <textarea id="bodyinput" name="note" rows="5" cols="50">{{this.note.body}}</textarea>
+            </div>
+            {{else}}
+            <div class="row">
+                <input type="text" name="Title" id="titleinput" value="">
+            </div>
+            <br>
+            <div class="row">
+                <textarea id="bodyinput" name="note" rows="5" cols="50"></textarea>
+            </div>
+            {{/if}}
+        </div>
+        <div class="modal-footer">
+            {{#if note}}
+                <button data-id="{{this.note._id}}" id="updatenote">Update</button>
+                <button data-id="{{this.note._id}}" id="deletenote">Delete</button>
+            {{else}}
+                <button data-id="{{this._id}}" id="savenote">Save</button> 
+            {{/if}}
+        </div>
+    </div>
+</div>
+{{/each}}
